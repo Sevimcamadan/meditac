@@ -1,35 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/header";
+import Footer from "./components/footer";
+
+import TibbiBirimler from "./pages/tibbi-birimler";
+import Hekimler from "./pages/hekimler";
+import SaglikRehberi from "./pages/saglik-rehberi";
+import HastaRehberi from "./pages/hasta-rehberi";
+import DoktorDetay from "./pages/doktor-detay";
+import Hakkimizda from "./pages/hakkimizda";
+import SaglikDetay from "./pages/saglik-detay";
+import HastaDetay from "./pages/hasta-detay";
+
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Router>
+      <Header />
+      <main className="p-6">
+        <Routes>
+          <Route path="/" element={<div className="text-xl">Anasayfa</div>} />
+          <Route path="/tibbi-birimler" element={<TibbiBirimler />} />
+          <Route path="/hekimler" element={<Hekimler />} />
+          <Route path="/saglik-rehberi" element={<SaglikRehberi />} />
+          <Route path="/hasta-rehberi" element={<HastaRehberi />} />
+          <Route path="/doktor/:id" element={<DoktorDetay />} />
+          <Route path="/hakkimizda" element={<Hakkimizda />} />
+          <Route path="/saglik-rehberi/:id" element={<SaglikDetay />} />
+          <Route path="/hasta-rehberi/:id" element={<HastaDetay />} />
+
+
+
+
+        </Routes>
+      </main>
+      <Footer />
+    </Router>
+  );
 }
 
-export default App
+export default App;
