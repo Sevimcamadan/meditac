@@ -10,7 +10,7 @@ import DoktorDetay from "./pages/doktor-detay";
 import Hakkimizda from "./pages/hakkimizda";
 import SaglikDetay from "./pages/saglik-detay";
 import HastaDetay from "./pages/hasta-detay";
-
+import Anasayfa from "./pages/anasayfa";
 
 
 
@@ -29,6 +29,7 @@ function App() {
           <Route path="/hakkimizda" element={<Hakkimizda />} />
           <Route path="/saglik-rehberi/:id" element={<SaglikDetay />} />
           <Route path="/hasta-rehberi/:id" element={<HastaDetay />} />
+          <Route path="/anasayfa/" element={<Anasayfa />} />
 
 
 
