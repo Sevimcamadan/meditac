@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import meditacLogo from "../assets/images/logo/meditac-logo.png";
 
-
 function Header() {
     return (
         <header className="bg-red-600 text-white p-4 flex justify-between items-center">

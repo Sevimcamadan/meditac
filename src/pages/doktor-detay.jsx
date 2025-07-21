@@ -1,22 +1,49 @@
+import React from "react";
 import { useParams } from "react-router-dom";
 import doctors from "../data/doctors";
 
 
-
-function DoktorDetay() {
+const DoctorDetail = () => {
     const { id } = useParams();
     const doctor = doctors.find((doc) => doc.id === parseInt(id));
 
-    if (!doctor) return <div className="p-6">Doktor bulunamadı.</div>;
+    if (!doctor) {
+        return <div className="text-center p-10 text-red-500">Doktor bulunamadı.</div>;
+    }
 
     return (
-        <div className="p-6">
-            <h2 className="text-2xl font-bold mb-2">{doctor.name}</h2>
-            <img src={doctor.image} alt={doctor.name} className="w-60 h-60 object-cover rounded mb-4" />
-            <p className="text-gray-600 mb-2">{doctor.specialization}</p>
-            <p>{doctor.description}</p>
+        <div className="max-w-4xl mx-auto p-6">
+            <div className="flex flex-col md:flex-row items-center gap-6">
+                <img
+                    src={doctor.image}
+                    alt={doctor.name}
+                    className="w-48 h-48 object-cover rounded-full shadow-lg"
+                />
+                <div>
+                    <h2 className="text-2xl font-bold mb-1">{doctor.name}</h2>
+                    <p className="text-gray-600">{doctor.specialization}</p>
+                </div>
+            </div>
+
+            <div className="mt-8">
+                <h3 className="text-xl font-semibold mb-2">İlgi Alanları</h3>
+                <ul className="list-disc list-inside text-gray-700 space-y-1">
+                    {doctor.interests.map((interest, index) => (
+                        <li key={index}>{interest}</li>
+                    ))}
+                </ul>
+            </div>
+
+            <div className="mt-8">
+                <h3 className="text-xl font-semibold mb-2">Eğitim ve Uzmanlık</h3>
+                <ul className="list-disc list-inside text-gray-700 space-y-1">
+                    {doctor.education.map((edu, index) => (
+                        <li key={index}>{edu}</li>
+                    ))}
+                </ul>
+            </div>
         </div>
     );
-}
+};
 
-export default DoktorDetay;
+export default DoctorDetail;

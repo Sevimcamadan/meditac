@@ -6,7 +6,7 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 
-import logo from "../../assets/images/logo/logo.png";
+
 
 const SocialShare = [
   { Social: <FaFacebookF />, link: "https://www.facebook.com/" },
@@ -26,9 +26,7 @@ const FooterTwo = () => {
           <div className="col-lg-4 col-md-6 col-sm-6 col-12">
             <div className="inner">
               <div className="logo text-center text-sm-left mb_sm--20">
-                <a href="/home-one">
-                  <img src={logo} alt="Logo images" />
-                </a>
+
               </div>
             </div>
           </div>

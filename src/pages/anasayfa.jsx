@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import Helmet from "../component/common/Helmet";
 import FooterTwo from "../component/footer/FooterTwo";
 import hospitalBg from "../assets/images/bg/pexels-pixabay-534219.jpg";
+import Header from "../components/header";
 
 // ✅ Sağlık Rehberi bileşeni importu:
 import SaglikRehberi from "../components/SaglikRehberi"; // yol doğruysa böyle
@@ -18,6 +19,8 @@ const Anasayfa = () => {
     return (
         <Fragment>
             <Helmet pageTitle="Ana Sayfa" />
+
+
 
             {/* Hero Alanı (Arkaplan foto + yazı) */}
             <div
