@@ -1,46 +1,102 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import doctors from "../data/doctors";
 
-
 const DoctorDetail = () => {
     const { id } = useParams();
-    const doctor = doctors.find((doc) => doc.id === parseInt(id));
+    const doctor = doctors.find((d) => d.id.toString() === id);
+    const [activeTab, setActiveTab] = useState("ozgecmis");
 
-    if (!doctor) {
-        return <div className="text-center p-10 text-red-500">Doktor bulunamadı.</div>;
-    }
+    if (!doctor) return <div>Doktor bulunamadı.</div>;
 
     return (
-        <div className="max-w-4xl mx-auto p-6">
-            <div className="flex flex-col md:flex-row items-center gap-6">
+        <div className="w-full">
+            {/* ÜST YATAY GÖRSEL */}
+            <div className="relative w-full h-[400px] md:h-[500px]">
                 <img
-                    src={doctor.image}
+                    src={doctor.headerImage || doctor.image}
                     alt={doctor.name}
-                    className="w-48 h-48 object-cover rounded-full shadow-lg"
+                    className="w-full h-full object-cover"
                 />
-                <div>
-                    <h2 className="text-2xl font-bold mb-1">{doctor.name}</h2>
-                    <p className="text-gray-600">{doctor.specialization}</p>
+                <div className="absolute inset-0 bg-black bg-opacity-60 flex items-end justify-start p-10">
+                    <div className="text-left text-white max-w-3xl">
+                        <h2 className="text-4xl font-bold mb-2">{doctor.title} {doctor.name}</h2>
+                        <p className="text-xl">{doctor.specialization}</p>
+                        {doctor.interests?.length > 0 && (
+                            <p className="text-sm mt-2">{doctor.interests.join(" • ")}</p>
+                        )}
+                    </div>
                 </div>
             </div>
 
-            <div className="mt-8">
-                <h3 className="text-xl font-semibold mb-2">İlgi Alanları</h3>
-                <ul className="list-disc list-inside text-gray-700 space-y-1">
-                    {doctor.interests.map((interest, index) => (
-                        <li key={index}>{interest}</li>
-                    ))}
-                </ul>
-            </div>
+            {/* ALT KISIM - SOLA YASLI, FONTSAL ŞIKLIK */}
+            <div className="w-full px-6 md:px-12 py-16 flex flex-col md:flex-row gap-10 font-serif">
+                {/* SOL FOTO */}
+                <div className="w-full md:w-1/3">
+                    <img
+                        src={doctor.image}
+                        alt={doctor.name}
+                        className="w-full h-auto rounded-xl shadow-md object-cover"
+                    />
+                </div>
 
-            <div className="mt-8">
-                <h3 className="text-xl font-semibold mb-2">Eğitim ve Uzmanlık</h3>
-                <ul className="list-disc list-inside text-gray-700 space-y-1">
-                    {doctor.education.map((edu, index) => (
-                        <li key={index}>{edu}</li>
-                    ))}
-                </ul>
+                {/* SAĞ İÇERİK */}
+                <div className="w-full md:w-2/3">
+                    {/* Sekmeler */}
+                    <div className="flex justify-start gap-4 mb-8">
+                        <button
+                            onClick={() => setActiveTab("ozgecmis")}
+                            className={`px-5 py-2 rounded-md font-medium transition-all duration-300
+      ${activeTab === "ozgecmis"
+                                    ? "bg-red-600 text-white shadow"
+                                    : "bg-gray-100 text-gray-800 hover:bg-red-100 hover:text-red-600"
+                                }`}
+                        >
+                            Hekim Özgeçmişi
+                        </button>
+
+                        <button
+                            onClick={() => setActiveTab("yayinlar")}
+                            className={`px-5 py-2 rounded-md font-medium transition-all duration-300
+      ${activeTab === "yayinlar"
+                                    ? "bg-red-600 text-white shadow"
+                                    : "bg-gray-100 text-gray-800 hover:bg-red-100 hover:text-red-600"
+                                }`}
+                        >
+                            Bilimsel Yayınları
+                        </button>
+                    </div>
+
+
+                    {/* İçerik */}
+                    {activeTab === "ozgecmis" && (
+                        <div>
+                            <h3 className="text-xl font-semibold mb-2">Eğitim</h3>
+                            <ul className="list-disc pl-5 text-gray-700 leading-relaxed">
+                                {doctor.education?.map((item, index) => (
+                                    <li key={index}>{item}</li>
+                                ))}
+                            </ul>
+                            <h3 className="text-xl font-semibold mt-6 mb-2">Deneyim</h3>
+                            <ul className="list-disc pl-5 text-gray-700 leading-relaxed">
+                                {doctor.experience?.map((item, index) => (
+                                    <li key={index}>{item}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+
+                    {activeTab === "yayinlar" && (
+                        <div>
+                            <h3 className="text-xl font-semibold mb-2">Yayınlar</h3>
+                            <ul className="list-disc pl-5 text-gray-700 leading-relaxed">
+                                {doctor.publications?.map((item, index) => (
+                                    <li key={index}>{item}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+                </div>
             </div>
         </div>
     );
