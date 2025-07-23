@@ -2,9 +2,11 @@ import React, { Fragment } from "react";
 import FooterTwo from "../component/footer/FooterTwo";
 import hospitalBg from "../assets/images/bg/pexels-pixabay-534219.jpg";
 import Header from "../components/header";
+import AnaSaglikRehberi from "../components/AnaSaglikRehberi";
+import IletisimFormu from "../components/IletisimFormu";
+import IletisimBilgileri from "../components/IletisimBilgileri";
 
-// ✅ Sağlık Rehberi bileşeni importu:
-import SaglikRehberi from "../components/SaglikRehberi"; // yol doğruysa böyle
+
 
 const Anasayfa = () => {
     const menuTrigger = () => {
@@ -66,11 +68,17 @@ const Anasayfa = () => {
                 </div>
             </div>
 
-            {/* ✅ Sağlık Rehberi */}
             <section className="bg-white py-20" id="saglik-rehberi">
-
-                <SaglikRehberi />
+                <AnaSaglikRehberi />
             </section>
+
+            <IletisimBilgileri />
+
+            <section className="bg-white py-20">
+                <IletisimFormu />
+            </section>
+
+
 
             {/* Footer */}
             <FooterTwo />

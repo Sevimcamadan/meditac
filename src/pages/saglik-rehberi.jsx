@@ -1,6 +1,9 @@
 import React from "react";
 import healthGuides from "../data/healthGuides";
 import { useNavigate } from "react-router-dom";
+import IletisimBolumu from "../components/IletisimBolumu";
+import Footer from "../components/footer";
+
 
 const SaglikRehberi = () => {
     const navigate = useNavigate();
@@ -40,6 +43,9 @@ const SaglikRehberi = () => {
                     </div>
                 ))}
             </div>
+            <IletisimBolumu />
+            <Footer />
+
         </div>
     );
 };
