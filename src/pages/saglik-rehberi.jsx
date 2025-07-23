@@ -1,46 +1,47 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
+import healthGuides from "../data/healthGuides";
+import { useNavigate } from "react-router-dom";
 
-// Tıbbi birimler A-Z grubu
-const tibbiBirimlerAZ = {
-    B: ["Beslenme ve Diyet"],
-    C: ["Check-Up", "Çocuk Sağlığı ve Hastalıkları"],
-    D: ["Dermatoloji (Cildiye)"],
-    F: ["Fizik Tedavi ve Rehabilitasyon"],
-    G: ["Göğüs Hastalıkları"],
-    İ: ["İç Hastalıkları (Dahiliye)"],
-    K: ["Kardiyoloji", "Konuşma ve Dil Terapisi"],
-    M: ["Medikal Estetik"],
-    N: ["Nöroloji"],
-    P: ["Psikiyatri"],
-    R: ["Radyoloji"]
-};
-
-function TibbiBirimler() {
-    const { t } = useTranslation();
+const SaglikRehberi = () => {
+    const navigate = useNavigate();
 
     return (
-        <div className="max-w-screen-lg mx-auto px-4 py-12">
-            <h1 className="text-3xl font-bold mb-6">{t("medical_units_title") || "Tıbbi Birimler"}</h1>
+        <div className="max-w-7xl mx-auto px-4 py-12">
+            {/* Başlık */}
+            <h1 className="text-4xl font-extrabold text-red-600 text-center mb-4 tracking-tight">
+                Sağlık Rehberi
+            </h1>
+            <div className="w-24 h-1 bg-red-600 mx-auto mb-10 rounded"></div>
 
-            <div className="space-y-10">
-                {Object.keys(tibbiBirimlerAZ)
-                    .sort()
-                    .map((harf) => (
-                        <div key={harf}>
-                            <h2 className="text-2xl font-semibold mb-4">{harf}</h2>
-                            <ul className="space-y-2">
-                                {tibbiBirimlerAZ[harf].map((birim, index) => (
-                                    <li key={index} className="bg-white p-4 shadow rounded text-gray-800">
-                                        {birim}
-                                    </li>
-                                ))}
-                            </ul>
+            {/* Grid Kartlar */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                {healthGuides.map((item) => (
+                    <div
+                        key={item.id}
+                        className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition"
+                    >
+                        <img
+                            src={item.image}
+                            alt={item.title}
+                            className="w-full h-48 object-cover"
+                        />
+                        <div className="p-5">
+                            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                                {item.title}
+                            </h3>
+                            <p className="text-gray-600 text-sm mb-4">{item.description}</p>
+                            <button
+                                onClick={() => navigate(`/saglik-rehberi/${item.slug}`)}
+                                className="text-red-600 font-medium hover:underline"
+                            >
+                                Devamını Oku →
+                            </button>
                         </div>
-                    ))}
+                    </div>
+                ))}
             </div>
         </div>
     );
-}
+};
 
-export default TibbiBirimler;
+export default SaglikRehberi;

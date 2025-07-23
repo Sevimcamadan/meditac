@@ -1,75 +1,57 @@
 const healthGuides = [
     {
         id: 1,
-        title: "Kalp Spazmı Nedir? Kalp Spazmı Belirtileri",
-        summary: "Kalp spazmı, göğüs ağrısı ile kendini gösteren bir damar daralmasıdır.",
-        content: "Kalp spazmı, genellikle stres, yorgunluk ya da damar tıkanıklığına bağlı olarak kalp kaslarına yeterince oksijen gitmemesi sonucu oluşur. Belirtiler arasında göğüs sıkışması, nefes darlığı ve terleme yer alır."
+        title: "Kalp Krizi Belirtileri Nelerdir?",
+        description: "Kalp krizinin sessiz belirtileri ve acil müdahale gerektiren durumlar hakkında bilgi.",
+        image: "/images/health/kalp-krizi.jpg",
+        slug: "kalp-krizi-belirtileri",
+        category: "Kalp ve Damar",
+        content: "Kalp krizi, kalp kasına kan taşıyan damarlardan birinin tıkanması sonucu oluşur.\nGöğüste baskı veya sıkışma hissi, sol kola yayılabilen ağrı, terleme, bulantı ve nefes darlığı en yaygın belirtilerdir.\nKadınlarda sırt, çene veya karın ağrısı şeklinde de görülebilir. Kalp krizi şüphesi durumunda acil yardım çağırılmalı ve aspirin çiğnenerek alınmalıdır."
     },
     {
         id: 2,
-        title: "Efor Testi Nedir? Efor Testi Nasıl Yapılır?",
-        summary: "Kalp fonksiyonlarını değerlendirmek için yapılan fiziksel stres testidir.",
-        content: "Efor testi, yürüyüş bandı üzerinde hastanın kalp ritmi, tansiyon ve EKG değerleri ölçülerek yapılır. Kalp damar hastalıklarının teşhisinde yaygın olarak kullanılır."
+        title: "Sıcak Havalarda Hipertansiyon Riski Artıyor",
+        description: "Yaz aylarında yüksek tansiyon hastalarının dikkat etmesi gerekenler.",
+        image: "/images/health/hipertansiyon.jpg",
+        slug: "sicakta-hipertansiyon",
+        category: "Dahiliye",
+        content: "Yüksek sıcaklıklar vücutta sıvı kaybına ve tansiyon dalgalanmalarına yol açabilir.\nHipertansiyon hastalarının yeterli sıvı alması, ağır egzersizlerden kaçınması ve gölgede kalması önerilir.\nİlaçlar düzenli alınmalı ve ani tansiyon düşmelerine karşı dikkatli olunmalıdır."
     },
     {
         id: 3,
-        title: "Stent Nedir? Nasıl Takılır?",
-        summary: "Tıkalı damarlara uygulanan metalik bir tüptür.",
-        content: "Stent, kalp damarlarının tıkanıklığını açmak için kullanılan bir yöntemdir. Anjiyografi sırasında tıkalı bölgeye yerleştirilir ve kan akışını sağlar."
+        title: "Çocuklarda Alerjik Rinit",
+        description: "Yaz aylarında artış gösteren çocuk alerjileri hakkında bilmeniz gerekenler.",
+        image: "/images/health/alerji.jpg",
+        slug: "alerjik-rinit-cocuklarda",
+        category: "Çocuk Sağlığı",
+        content: "Alerjik rinit, burun tıkanıklığı, hapşırık, kaşıntı ve gözlerde sulanma gibi semptomlarla kendini gösterir.\nÇocuklarda bahar ve yaz aylarında polenlere karşı hassasiyet artar.\nEv tozları, hayvan tüyleri ve küf gibi alerjenlerden uzak durmak önemlidir. Tedavide antihistaminikler ve burun spreyleri kullanılır."
     },
     {
         id: 4,
-        title: "Burkulma Nedir? Burkulmaya Ne İyi Gelir?",
-        summary: "Eklem çevresindeki bağ dokusunun zorlanmasıdır.",
-        content: "Burkulma sonrası ilk müdahale olarak buz uygulaması, istirahat ve bandaj önerilir. Ağrı ve şişlik azalmazsa ortopedi uzmanına başvurulmalıdır."
+        title: "Stresin Vücut Üzerindeki 5 Etkisi",
+        description: "Uzun süreli stresin kalpten cilde kadar etkileri ve başa çıkma yolları.",
+        image: "/images/health/stres.jpg",
+        slug: "stresin-vucut-etkileri",
+        category: "Psikoloji",
+        content: "Stres; kalp-damar sağlığını bozabilir, bağışıklık sistemini zayıflatabilir, mide problemlerine yol açabilir.\nAyrıca ciltte döküntü, saç dökülmesi ve uyku bozuklukları da görülebilir.\nDüzenli egzersiz, yeterli uyku ve nefes egzersizleri stresle başa çıkmada etkilidir."
     },
     {
         id: 5,
-        title: "ANA Testi Nedir? ANA Testi Negatif ve Pozitif",
-        summary: "Bağışıklık sistemi hastalıklarını araştırmak için yapılan kan testidir.",
-        content: "ANA (Antinükleer Antikor) testi, lupus gibi otoimmün hastalıkların teşhisinde kullanılır. Pozitif olması her zaman hastalık anlamına gelmez, doktor değerlendirmesi gerekir."
+        title: "Migren Atakları Nasıl Yönetilir?",
+        description: "Migren tipi baş ağrılarının nedenleri ve atak öncesi uyarıcılar.",
+        image: "/images/health/migren.jpg",
+        slug: "migren-nedir",
+        category: "Nöroloji",
+        content: "Migren; genellikle tek taraflı, zonklayıcı ve şiddetli baş ağrısıyla karakterizedir.\nHassasiyet, ışığa veya sese karşı duyarlılık ve mide bulantısı sık görülür.\nTetikleyiciler arasında uykusuzluk, açlık, stres ve hormonal değişiklikler vardır. Atak öncesinde 'aura' olarak bilinen belirtiler ortaya çıkabilir."
     },
     {
         id: 6,
-        title: "Akciğer Grafisi Nedir? Nasıl Çekilir?",
-        summary: "Akciğerlerin görüntülenmesi için yapılan bir röntgen işlemidir.",
-        content: "Akciğer grafisi, solunum yolu enfeksiyonları, zatürre, kitle veya travmaların değerlendirilmesi için kullanılır. İşlem kısa sürer ve ağrısızdır."
-    },
-    {
-        id: 7,
-        title: "Karaciğere Ne İyi Gelir? Karaciğere İyi Gelen Besinler",
-        summary: "Karaciğer sağlığı için faydalı besinler ve yaşam önerileri.",
-        content: "Enginar, yeşil yapraklı sebzeler, zerdeçal, su tüketimi ve düzenli uyku karaciğerin sağlıklı çalışmasına destek olur."
-    },
-    {
-        id: 8,
-        title: "Radyasyon Nedir? Radyasyonun Sağlık Üzerindeki Etkileri",
-        summary: "Radyasyonun insan vücudu üzerindeki olası etkileri nelerdir?",
-        content: "Yüksek doz radyasyon hücrelere zarar verebilir. Medikal görüntüleme cihazlarında kullanılan dozlar genellikle düşük ve güvenlidir."
-    },
-    {
-        id: 9,
-        title: "Makatta Kaşıntı Neden Olur? Makat Kaşıntısı Nasıl Geçer?",
-        summary: "Anal bölgede kaşıntının yaygın nedenleri ve çözüm yolları.",
-        content: "Hijyen eksikliği, mantar enfeksiyonu, hemoroid ya da irritan sabun kullanımı gibi nedenlerle olabilir. Cilt uzmanına başvurulması önerilir."
-    },
-    {
-        id: 10,
-        title: "Havale Nedir? Havale Belirtileri Nelerdir?",
-        summary: "Çocuklarda ve yetişkinlerde görülebilen nörolojik bir durumdur.",
-        content: "Havale, beyin elektriksel aktivitesindeki ani değişimle ortaya çıkar. Titreme, bilinç kaybı, gözlerde kayma gibi belirtilerle kendini gösterir. Acil müdahale gerektirir."
-    },
-    {
-        id: 11,
-        title: "Sırtta Sivilce Neden Çıkar? Sırtta Sivilce Nasıl Geçer?",
-        summary: "Sırt bölgesindeki sivilceler neden olur ve nasıl tedavi edilir?",
-        content: "Aşırı terleme, dar kıyafet, hormonal değişiklikler ve ciltteki yağlanma sırt sivilcesine yol açabilir. Cilt temizliği ve gerekirse dermatolojik tedavi gerekir."
-    },
-    {
-        id: 12,
-        title: "Tiroid Cerrahisi Nedir? Tiroid Ameliyatı Türleri Nelerdir?",
-        summary: "Tiroid bezi ile ilgili cerrahi işlemler hakkında bilgi.",
-        content: "Tiroid nodülü, guatr veya kanser durumlarında cerrahi işlem uygulanabilir. Total veya kısmi tiroidektomi türleri vardır. Endokrin cerrah tarafından yapılır."
+        title: "Güneş Çarpmasına Karşı Ne Yapmalı?",
+        description: "Hayati risk taşıyan güneş çarpmasına karşı korunma yolları.",
+        image: "/images/health/gunes-carpmasi.jpg",
+        slug: "gunes-carpmasi",
+        category: "Acil Durum",
+        content: "Güneş çarpması, uzun süreli güneş maruziyeti sonrası vücut ısısının 40°C üzerine çıkmasıyla oluşur.\nBaş ağrısı, bilinç bulanıklığı, bulantı, nabız hızlanması ve sıcak-kuru cilt başlıca belirtileridir.\nHasta hemen gölgeye alınmalı, üzerindeki giysiler gevşetilmeli ve vücut serinletilmelidir."
     }
 ];
 
