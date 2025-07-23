@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PageHelmet from "../component/common/Helmet";
 import { FiHeadphones, FiMail, FiMapPin } from "react-icons/fi";
 import GoogleMapReact from "google-map-react";
 import ContactTwo from "../elements/contact/ContactTwo";
@@ -23,7 +22,6 @@ class Contact extends Component {
   render() {
     return (
       <React.Fragment>
-        <PageHelmet pageTitle="Contact" />
 
         <Header
           headertransparent="header--transparent"

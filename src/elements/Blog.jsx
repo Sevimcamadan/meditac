@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PageHelmet from "../component/common/Helmet";
 import Breadcrumb from "../elements/common/Breadcrumb";
 import Pagination from "../elements/common/Pagination";
 import BlogList from "../elements/blog/BlogList";
@@ -8,15 +7,14 @@ import { FiChevronUp } from "react-icons/fi";
 import Header from "../component/header/Header";
 import Footer from "../component/footer/Footer";
 
-class Blog extends Component{
-    render(){
-        return(
+class Blog extends Component {
+    render() {
+        return (
             <React.Fragment>
-                <PageHelmet pageTitle='Blog' />
 
                 <Header headertransparent="header--transparent" colorblack="color--black" logoname="logo.png" />
                 {/* Start Breadcrump Area */}
-                <Breadcrumb title={'Blog List'}   />
+                <Breadcrumb title={'Blog List'} />
                 {/* End Breadcrump Area */}
 
 
@@ -34,7 +32,7 @@ class Blog extends Component{
                     </div>
                 </div>
                 {/* End Blog Area */}
-                
+
                 {/* Start Back To Top */}
                 <div className="backto-top">
                     <ScrollToTop showUnder={160}>
@@ -42,8 +40,8 @@ class Blog extends Component{
                     </ScrollToTop>
                 </div>
                 {/* End Back To Top */}
-                
-                <Footer /> 
+
+                <Footer />
 
             </React.Fragment>
         )

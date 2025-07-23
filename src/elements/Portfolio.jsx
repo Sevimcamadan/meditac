@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PageHelmet from "../component/common/Helmet";
 import Slider from "react-slick";
 import { slickDot } from "../page-demo/script";
 import Breadcrumb from "../elements/common/Breadcrumb";
@@ -43,14 +42,13 @@ const list = [
 ]
 
 
-class Portfolio extends Component{
-    render(){
-        return(
+class Portfolio extends Component {
+    render() {
+        return (
             <React.Fragment>
-                <PageHelmet pageTitle='Portfolio' />
                 <Header headertransparent="header--transparent" colorblack="color--black" logoname="logo.png" />
                 {/* Start Breadcrump Area */}
-                <Breadcrumb title={'Portfolio'}   />
+                <Breadcrumb title={'Portfolio'} />
                 {/* End Breadcrump Area */}
 
                 {/* Start Portfolio Area */}
@@ -69,7 +67,7 @@ class Portfolio extends Component{
                                 <div className="col-lg-12">
                                     <div className="slick-space-gutter--15 slickdot--20">
                                         <Slider {...slickDot}>
-                                            {list.map((value , index) => (
+                                            {list.map((value, index) => (
                                                 <div className="portfolio" key={index}>
                                                     <div className="thumbnail-inner">
                                                         <div className={`thumbnail ${value.image}`}></div>
@@ -130,7 +128,7 @@ class Portfolio extends Component{
                     </ScrollToTop>
                 </div>
                 {/* End Back To Top */}
-                <Footer /> 
+                <Footer />
             </React.Fragment>
         )
     }

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PageHelmet from "../component/common/Helmet";
 import ModalVideo from "react-modal-video";
 import { FiClock, FiUser, FiMessageCircle, FiHeart } from "react-icons/fi";
 import { Link } from "react-router-dom";
@@ -25,7 +24,6 @@ class BlogDetails extends Component {
   render() {
     return (
       <React.Fragment>
-        <PageHelmet pageTitle="Blog Details" />
         <Header
           headertransparent="header--transparent"
           colorblack="color--black"

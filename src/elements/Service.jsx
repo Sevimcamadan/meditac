@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import PageHelmet from "../component/common/Helmet";
 import Breadcrumb from "../elements/common/Breadcrumb";
-import { FiCast , FiLayers , FiUsers , FiMonitor ,FiChevronUp } from "react-icons/fi";
+import { FiCast, FiLayers, FiUsers, FiMonitor, FiChevronUp } from "react-icons/fi";
 import ScrollToTop from 'react-scroll-up';
 import Header from "../component/header/Header";
 import Footer from "../component/footer/Footer";
@@ -39,15 +38,14 @@ const ServiceList = [
         description: 'I throw myself down among the tall grass by the stream as I lie close to the earth.'
     },
 ]
-class Service extends Component{
-    render(){
-        return(
+class Service extends Component {
+    render() {
+        return (
             <React.Fragment>
-                <PageHelmet pageTitle='Service' />
                 <Header headertransparent="header--transparent" colorblack="color--black" logoname="logo.png" />
 
                 {/* Start Breadcrump Area */}
-                <Breadcrumb title={'Service'}   />
+                <Breadcrumb title={'Service'} />
                 {/* End Breadcrump Area */}
 
                 {/* Start Service Area */}
@@ -62,7 +60,7 @@ class Service extends Component{
                             </div>
                         </div>
                         <div className="row service-one-wrapper">
-                            {ServiceList.map( (val , i) => (
+                            {ServiceList.map((val, i) => (
                                 <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12" key={i}>
                                     <a href="/service-details">
                                         <div className="service service__style--2">
@@ -94,7 +92,7 @@ class Service extends Component{
                             </div>
                         </div>
                         <div className="row service-one-wrapper">
-                            {ServiceList.map( (val , i) => (
+                            {ServiceList.map((val, i) => (
                                 <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12" key={i}>
                                     <a className="text-center" href="/service-details">
                                         <div className="service service__style--2">
@@ -126,7 +124,7 @@ class Service extends Component{
                             </div>
                         </div>
                         <div className="row creative-service">
-                            {ServiceList.map( (val , i) => (
+                            {ServiceList.map((val, i) => (
                                 <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12" key={i}>
                                     <a href="/service-details">
                                         <div className="service service__style--2">
@@ -158,7 +156,7 @@ class Service extends Component{
                             </div>
                         </div>
                         <div className="row creative-service">
-                            {ServiceList.map( (val , i) => (
+                            {ServiceList.map((val, i) => (
                                 <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12" key={i}>
                                     <a className="text-center" href="/service-details">
                                         <div className="service service__style--2">
@@ -185,7 +183,7 @@ class Service extends Component{
                     </ScrollToTop>
                 </div>
                 {/* End Back To Top */}
-                
+
                 <Footer />
 
 

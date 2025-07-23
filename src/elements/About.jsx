@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PageHelmet from "../component/common/Helmet";
 import Breadcrumb from "../elements/common/Breadcrumb";
 import CounterOne from "../elements/counters/CounterOne";
 import Testimonial from "../elements/Testimonial";
@@ -23,7 +22,6 @@ class About extends Component {
         "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to use a passage of Lorem Ipsum Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going.";
     return (
       <React.Fragment>
-        <PageHelmet pageTitle="About" />
 
         <Header
           headertransparent="header--transparent"

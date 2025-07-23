@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PageHelmet from "../component/common/Helmet";
 import ModalVideo from "react-modal-video";
 import ScrollToTop from "react-scroll-up";
 import { FiChevronUp } from "react-icons/fi";
@@ -23,9 +22,7 @@ class ServiceDetails extends Component {
   render() {
     return (
       <React.Fragment>
-        {/* Start Pagehelmet  */}
-        <PageHelmet pageTitle="Service Details" />
-        {/* End Pagehelmet  */}
+
 
         <Header
           headertransparent="header--transparent"

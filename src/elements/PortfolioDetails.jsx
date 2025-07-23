@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PageHelmet from "../component/common/Helmet";
 import ModalVideo from "react-modal-video";
 import {
   FaTwitter,
@@ -39,7 +38,6 @@ class PortfolioDetails extends Component {
   render() {
     return (
       <React.Fragment>
-        <PageHelmet pageTitle="Portfolio Details" />
 
         <Header
           headertransparent="header--transparent"
