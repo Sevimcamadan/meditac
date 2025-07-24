@@ -1,4 +1,5 @@
 import React from "react";
+  const { t, i18n } = useTranslation();
 
 
 // Görselleri import et
