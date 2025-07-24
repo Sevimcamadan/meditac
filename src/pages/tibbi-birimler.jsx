@@ -24,8 +24,9 @@ function TibbiBirimler() {
         <div>
             <div className="max-w-screen-lg mx-auto px-4 py-12">
                 <h1 className="text-4xl font-extrabold text-red-600 text-center mb-4 tracking-tight">
-                    Tıbbi Birimler
+                    {t("medical_units_title")}
                 </h1>
+
                 <div className="w-24 h-1 bg-red-600 mx-auto mb-6 rounded"></div>
 
                 <div className="space-y-10">
@@ -41,7 +42,7 @@ function TibbiBirimler() {
                                                 to={`/hekimler?birim=${encodeURIComponent(unit)}`}
                                                 className="block bg-white shadow p-4 rounded hover:bg-blue-50 transition"
                                             >
-                                                {unit}
+                                                {t(`units.${unit}`)}
                                             </Link>
                                         </li>
                                     ))}
@@ -50,7 +51,6 @@ function TibbiBirimler() {
                         ))}
                 </div>
             </div>
-
 
             <IletisimBolumu />
             <Footer />

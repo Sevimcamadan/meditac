@@ -7,7 +7,7 @@ import Footer from "./components/footer";
 
 import TibbiBirimler from "./pages/tibbi-birimler";
 import Hekimler from "./pages/hekimler";
-import SaglikRehberi from "./pages/saglik-rehberi";
+import SaglikRehberi from "./pages/SaglikRehberi";
 import HastaRehberi from "./pages/hasta-rehberi";
 import DoktorDetay from "./pages/doktor-detay";
 import Hakkimizda from "./pages/hakkimizda";

@@ -26,19 +26,17 @@ function Hakkimizda() {
                         </h2>
 
                         <p className="text-gray-700 text-lg leading-relaxed mb-4">
-                            Meditac Hastanesi olarak, modern tıbbın gerektirdiği tüm donanım ve uzman kadromuzla hizmetinizdeyiz.
-                            Hasta memnuniyetini ön planda tutan anlayışımızla, etik değerlere bağlı bir sağlık hizmeti sunmaktayız.
+                            {t("about_p1")}
                         </p>
 
                         <p className="text-gray-700 text-lg leading-relaxed mb-4">
-                            Kurulduğumuz günden bu yana binlerce hastanın sağlığına kavuşmasına yardımcı olduk.
-                            Tıbbi birimlerimiz, alanında uzman doktorlarımız ve sürekli gelişen teknolojik altyapımız ile
-                            uluslararası standartlarda sağlık sunuyoruz.
+                            {t("about_p2")}
                         </p>
 
                         <p className="text-gray-700 text-lg leading-relaxed">
-                            Sağlıklı yarınlar için güvenle başvurabileceğiniz bir kurum olarak çalışmaya devam ediyoruz.
+                            {t("about_p3")}
                         </p>
+
                     </div>
                 </div>
             </div>

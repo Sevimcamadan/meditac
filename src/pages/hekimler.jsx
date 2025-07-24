@@ -1,17 +1,22 @@
-import React from "react";
 import { useLocation } from "react-router-dom";
 import doctors from "../data/doctors";
 import DoctorCard from "../components/DoctorCard";
 import IletisimBolumu from "../components/IletisimBolumu";
 import Footer from "../components/footer";
+import { useTranslation } from "react-i18next";
+
 
 function useQuery() {
     return new URLSearchParams(useLocation().search);
 }
 
+
 const Hekimler = () => {
     const query = useQuery();
+    const { t } = useTranslation();
     const selectedBirim = query.get("birim");
+
+
 
     const filteredDoctors = selectedBirim
         ? doctors.filter((doc) => doc.specialization === selectedBirim)
@@ -21,8 +26,10 @@ const Hekimler = () => {
         <div>
             <div className="max-w-7xl mx-auto px-4 py-12">
                 <h1 className="text-4xl font-extrabold text-red-600 text-center mb-4 tracking-tight">
-                    Doktor Kadromuz
+                    {t("doctor_team")}
                 </h1>
+
+
                 <div className="w-24 h-1 bg-red-600 mx-auto mb-6 rounded"></div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">

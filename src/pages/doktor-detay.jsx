@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import doctors from "../data/doctors";
+import { useTranslation } from "react-i18next";
+
 
 const DoctorDetail = () => {
     const { id } = useParams();
     const doctor = doctors.find((d) => d.id.toString() === id);
     const [activeTab, setActiveTab] = useState("ozgecmis");
+    const { t } = useTranslation();
 
-    if (!doctor) return <div>Doktor bulunamadı.</div>;
+
+    if (!doctor) return <div>{t("doctor_not_found")}</div>;
+
 
     return (
         <div className="w-full">
@@ -52,7 +57,8 @@ const DoctorDetail = () => {
                                     : "bg-gray-100 text-gray-800 hover:bg-red-100 hover:text-red-600"
                                 }`}
                         >
-                            Hekim Özgeçmişi
+                            {t("doctor_resume")}
+
                         </button>
 
                         <button
@@ -63,7 +69,7 @@ const DoctorDetail = () => {
                                     : "bg-gray-100 text-gray-800 hover:bg-red-100 hover:text-red-600"
                                 }`}
                         >
-                            Bilimsel Yayınları
+                            {t("doctor_publications")}
                         </button>
                     </div>
 
@@ -71,13 +77,15 @@ const DoctorDetail = () => {
                     {/* İçerik */}
                     {activeTab === "ozgecmis" && (
                         <div>
-                            <h3 className="text-xl font-semibold mb-2">Eğitim</h3>
+                            <h3 className="text-xl font-semibold mb-2">{t("education")}
+                            </h3>
                             <ul className="list-disc pl-5 text-gray-700 leading-relaxed">
                                 {doctor.education?.map((item, index) => (
                                     <li key={index}>{item}</li>
                                 ))}
                             </ul>
-                            <h3 className="text-xl font-semibold mt-6 mb-2">Deneyim</h3>
+                            <h3 className="text-xl font-semibold mt-6 mb-2">{t("experience")}
+                            </h3>
                             <ul className="list-disc pl-5 text-gray-700 leading-relaxed">
                                 {doctor.experience?.map((item, index) => (
                                     <li key={index}>{item}</li>
@@ -88,7 +96,8 @@ const DoctorDetail = () => {
 
                     {activeTab === "yayinlar" && (
                         <div>
-                            <h3 className="text-xl font-semibold mb-2">Yayınlar</h3>
+                            <h3 className="text-xl font-semibold mb-2">{t("publications")}
+                            </h3>
                             <ul className="list-disc pl-5 text-gray-700 leading-relaxed">
                                 {doctor.publications?.map((item, index) => (
                                     <li key={index}>{item}</li>
