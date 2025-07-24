@@ -1,5 +1,23 @@
 {
-    "welcome": "Welcome to Meditac!",
-    "medical_units_title": "Medical Units",
-    "health_guide_title": "Health Guide"
+  "welcome": "Welcome to Meditac!",
+  "medical_units_title": "Medical Units",
+  "health_guide_title": "Health Guide",
+  "menu": {
+    "home": "Home",
+    "about": "About Us",
+    "medical_units": "Medical Units",
+    "doctors": "Doctors",
+    "health_guide": "Health Guide",
+    "patient_guide": "Patient Guide"
+  },
+  "hero": {
+    "title": "TRUST IN HEALTHCARE",
+    "subtitle": "With our expert doctors, modern technology, and human-centered approach, we are always by your side.",
+    "cta": "About Us"
+  },
+  "guide": {
+    "title": "Health Guide",
+    "read_more": "Read More →",
+    "see_all": "See All"
+  }
 }

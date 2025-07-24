@@ -1,5 +1,23 @@
 {
-    "welcome": "Meditac'a Hoş Geldiniz!",
-    "medical_units_title": "Tıbbi Birimler",
-    "health_guide_title": "Sağlık Rehberi"
+  "welcome": "Meditac'a Hoş Geldiniz!",
+  "medical_units_title": "Tıbbi Birimler",
+  "health_guide_title": "Sağlık Rehberi",
+  "menu": {
+    "home": "Anasayfa",
+    "about": "Hakkımızda",
+    "medical_units": "Tıbbi Birimler",
+    "doctors": "Hekimler",
+    "health_guide": "Sağlık Rehberi",
+    "patient_guide": "Hasta Rehberi"
+  },
+  "hero": {
+    "title": "SAĞLIKTA GÜVEN",
+    "subtitle": "Uzman doktorlarımız, modern teknolojimiz ve insana değer veren yaklaşımımızla daima yanınızdayız.",
+    "cta": "Hakkımızda"
+  },
+  "guide": {
+    "title": "Sağlık Rehberi",
+    "read_more": "Devamını Oku →",
+    "see_all": "Tümünü Gör"
+  }
 }
